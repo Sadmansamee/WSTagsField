@@ -57,9 +57,9 @@ open class WSTagView: UIView {
         didSet { updateContent(animated: false) }
     }
     
-    open override var tintColor: UIColor! {
-        didSet { updateContent(animated: false) }
-    }
+//    open override var tintColor: UIColor! {
+//        didSet { updateContent(animated: false) }
+//    }
 
     /// Background color to be used for selected state.
     open var selectedColor: UIColor? {
