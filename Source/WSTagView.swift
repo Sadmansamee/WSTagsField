@@ -122,7 +122,7 @@ open class WSTagView: UIView {
     }
 
     fileprivate func updateColors() {
-        self.backgroundColor = selected ? selectedColor : tintColor
+        self.backgroundColor = selected ? selectedColor : normalBackgroundColor
         textLabel.textColor = selected ? selectedTextColor : textColor
     }
 
