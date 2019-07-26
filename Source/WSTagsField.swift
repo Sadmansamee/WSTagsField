@@ -27,9 +27,9 @@ open class WSTagsField: UIScrollView {
 //        }
 //    }
     
-    open  var normalBackgroundColor: UIColor! {
+    open  var unSelectedColor: UIColor! {
         didSet {
-            tagViews.forEach { $0.unSelectedColor = self.normalBackgroundColor }
+            tagViews.forEach { $0.unSelectedColor = self.unSelectedColor }
         }
     }
 
