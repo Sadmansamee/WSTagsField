@@ -29,7 +29,7 @@ open class WSTagsField: UIScrollView {
     
     open  var normalBackgroundColor: UIColor! {
         didSet {
-            tagViews.forEach { $0.normalBackgroundColor = self.normalBackgroundColor }
+            tagViews.forEach { $0.unSelectedColor = self.normalBackgroundColor }
         }
     }
 
@@ -386,7 +386,7 @@ open class WSTagsField: UIScrollView {
         tagView.font = self.font
         tagView.tintColor = self.tintColor
         tagView.textColor = self.textColor
-        tagView.normalBackgroundColor = self.normalBackgroundColor
+        tagView.unSelectedColor = self.normalBackgroundColor
         tagView.selectedColor = self.selectedColor
         tagView.selectedTextColor = self.selectedTextColor
         tagView.displayDelimiter = self.isDelimiterVisible ? self.delimiter : ""

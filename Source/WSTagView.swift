@@ -53,7 +53,7 @@ open class WSTagView: UIView {
         }
     }
 
-    open  var normalBackgroundColor: UIColor! {
+    open  var unSelectedColor: UIColor! {
         didSet { updateContent(animated: false) }
     }
     
@@ -94,7 +94,8 @@ open class WSTagView: UIView {
 
     public init(tag: WSTag) {
         super.init(frame: CGRect.zero)
-        self.backgroundColor = normalBackgroundColor
+       // unSelectedColor = .clear
+        self.backgroundColor = unSelectedColor
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
 
@@ -122,7 +123,7 @@ open class WSTagView: UIView {
     }
 
     fileprivate func updateColors() {
-        self.backgroundColor = selected ? selectedColor : normalBackgroundColor
+        self.backgroundColor = selected ? selectedColor : unSelectedColor
         textLabel.textColor = selected ? selectedTextColor : textColor
     }
 
