@@ -26,6 +26,12 @@ open class WSTagsField: UIScrollView {
             tagViews.forEach { $0.tintColor = self.tintColor }
         }
     }
+    
+    open  var normalBackgroundColor: UIColor! {
+        didSet {
+            tagViews.forEach { $0.normalBackgroundColor = self.normalBackgroundColor }
+        }
+    }
 
     /// Text color for tag view in normal (non-selected) state.
     open var textColor: UIColor? {
@@ -380,6 +386,7 @@ open class WSTagsField: UIScrollView {
         tagView.font = self.font
         tagView.tintColor = self.tintColor
         tagView.textColor = self.textColor
+        tagView.normalBackgroundColor = self.normalBackgroundColor
         tagView.selectedColor = self.selectedColor
         tagView.selectedTextColor = self.selectedTextColor
         tagView.displayDelimiter = self.isDelimiterVisible ? self.delimiter : ""

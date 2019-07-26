@@ -53,6 +53,10 @@ open class WSTagView: UIView {
         }
     }
 
+    open  var normalBackgroundColor: UIColor! {
+        didSet { updateContent(animated: false) }
+    }
+    
     open override var tintColor: UIColor! {
         didSet { updateContent(animated: false) }
     }
@@ -90,7 +94,7 @@ open class WSTagView: UIView {
 
     public init(tag: WSTag) {
         super.init(frame: CGRect.zero)
-        self.backgroundColor = tintColor
+        self.backgroundColor = normalBackgroundColor
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
 
